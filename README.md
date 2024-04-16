@@ -29,12 +29,35 @@ cd vagrant-default-debian-11
 
 Verifique os parâmetros abaixo no arquivo Vagrantfile e configure-os conforme sua necessidade:
 
-**config.vm.define "NomeVM" do |general|**: Defina o nome da sua Máquina Virtual, substituindo "NomeVM" pelo nome desejado.
-**general.vm.hostname = "NomeHost.domain.local"**: Configure o nome FQDN do host, ajustando "NomeHost.domain.local" conforme necessário.
-**vb.memory**: Escolha a quantidade de memória que deseja alocar para a máquina virtual. Por exemplo, 1G representa 1024 MB e 2G representa 2048 MB.
-**vb.cpus**: Escolha a quantidade de vCPUs que deseja utilizar. Você pode optar por 1 ou 2 vCPUs.
-**vb.name**: Defina o nome do host para sua máquina virtual.
+Defina o nome da sua Máquina Virtual, substituindo "NomeVM" pelo nome desejado.
 
+```bash
+config.vm.define "NomeVM" do |general| 
+```
+
+Configure o nome FQDN do host, ajustando "NomeHost.domain.local" conforme necessário.
+
+```bash
+general.vm.hostname = "NomeHost.domain.local"
+```
+
+Escolha a quantidade de memória que deseja alocar para a máquina virtual. Por exemplo, 1G representa 1024 MB e 2G representa 2048 MB.
+
+```bash
+vb.memory: 1
+```
+
+Escolha a quantidade de vCPUs que deseja utilizar. Você pode optar por 1 ou 2 vCPUs.
+
+```bash
+vb.cpus: 1
+```
+
+Defina o nome do host para sua máquina virtual.
+
+```bash
+vb.name: NomeVM
+```
 
 ## Instalação
 
